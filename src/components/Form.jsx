@@ -39,9 +39,9 @@ class FormInput extends React.Component {
     }
   };
 
-  handleSubmit = e => {
+  handleSubmit = async e => {
     e.preventDefault();
-    if (this.validateInput()) {
+    if (await this.validateInput()) {
       const { name, number } = this.state;
       const newId = nanoid();
       const newContact = { id: newId, name, number };
